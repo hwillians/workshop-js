@@ -4,19 +4,19 @@ villes.forEach(function (element) {
     console.log(element);
 });
 
-console.log("lettreADansToutesLesVilles = " + villes.every(function (element) {
-    return element.includes("a");
+console.log('lettreADansToutesLesVilles = ' + villes.every(function (element) {
+    return element.includes('a');
 }));
 
-console.log("auMoinsUneVilleAvecUnTiret = " + villes.some(function (element) {
+console.log('auMoinsUneVilleAvecUnTiret = ' + villes.some(function (element) {
     return element.includes('-');
 }));
 
-console.log("villesSansTiretSansEspace = " + villes.filter(function (element) {
+console.table( villes.filter(function (element) {
     return !element.includes(' ') && !element.includes('-');
 }))
 
-console.log("villesMajusculeSeTerminantParS = " + villes.filter(function (element) {
+console.table( villes.filter(function (element) {
     return element.includes('s', element.length - 1);
 }).map(function (element) {
     return element.toUpperCase()
