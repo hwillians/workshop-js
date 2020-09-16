@@ -12,17 +12,13 @@ console.log("auMoinsUneVilleAvecUnTiret = " + villes.some(function (element) {
     return element.includes('-');
 }));
 
-console.log( "villesSansTiretSansEspace = " + villes.filter(function (element) {
+console.log("villesSansTiretSansEspace = " + villes.filter(function (element) {
     return !element.includes(' ') && !element.includes('-');
 }))
 
-
-
-var villesMajusculeSeTerminantParS = villes.filter(function (element) {
+console.log("villesMajusculeSeTerminantParS = " + villes.filter(function (element) {
     return element.includes('s', element.length - 1);
-})
-
-console.log("villesMajusculeSeTerminantParS = "+villesMajusculeSeTerminantParS.map(function(element){
-   return element.toUpperCase()
+}).map(function (element) {
+    return element.toUpperCase()
 }))
 
