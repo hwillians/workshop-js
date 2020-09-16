@@ -3,7 +3,7 @@ function Personne(nom, prenom, pseudo) {
     this.prenom = prenom;
     this.pseudo = pseudo;
     this.getNomComplet = function () {
-        return nom + " " + prenom + ", " + pseudo;
+        return this.nom + ' ' + this.prenom + ', ' + this.pseudo;
     }
 }
 
@@ -22,7 +22,7 @@ var afficherPersonne = function (Personne) {
 
 afficherPersonne(paul)
 
-jules.pseudo =  "jules44";
+jules.pseudo =  'jules44';
 
 console.log(jules.getNomComplet())
 
@@ -37,7 +37,8 @@ jules.age = 30;
 console.log(jules.age)
 
 Personne.prototype.getInitiales = function(){
-    return this.nom +this.prenom;
+ 
+    return this.nom.charAt(0)+this.prenom.charAt(0);
 }
 
 console.log(jules.getInitiales())
