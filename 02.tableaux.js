@@ -12,11 +12,11 @@ console.log('auMoinsUneVilleAvecUnTiret = ' + villes.some(function (element) {
     return element.includes('-');
 }));
 
-console.table( villes.filter(function (element) {
+console.table(villes.filter(function (element) {
     return !element.includes(' ') && !element.includes('-');
 }))
 
-console.table( villes.filter(function (element) {
+console.table(villes.filter(function (element) {
     return element.includes('s', element.length - 1);
 }).map(function (element) {
     return element.toUpperCase()

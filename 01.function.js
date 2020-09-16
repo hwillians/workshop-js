@@ -32,7 +32,6 @@ afficherOperation('Somme', somme, 20, 40);
 
 afficherOperation('Multiplication', multiplication, 10, 20);
 
-afficherOperation('Soustraction', function(nb1, nb2) {
-  return nb1- nb2
+afficherOperation('Soustraction', function (nb1, nb2) {
+    return nb1 - nb2
 }, 15, 5);
-
