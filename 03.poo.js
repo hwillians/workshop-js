@@ -15,14 +15,15 @@ console.log(jules.pseudo)
 console.log(jules.getNomComplet())
 
 var afficherPersonne = function (Personne) {
-   var i = 0
-    for(i  in Personne)
-    console.log(Personne[i])
+    console.log(Personne.nom)
+    console.log(Personne.prenom)
+    console.log(Personne.pseudo)
+    console.log(Personne.getNomComplet())
 }
 
 afficherPersonne(paul)
 
-jules.pseudo =  'jules44';
+jules.pseudo = 'jules44';
 
 console.log(jules.getNomComplet())
 
@@ -36,9 +37,34 @@ jules.age = 30;
 
 console.log(jules.age)
 
-Personne.prototype.getInitiales = function(){
- 
-    return this.nom.charAt(0)+this.prenom.charAt(0);
+Personne.prototype.getInitiales = function () {
+
+    return this.nom.charAt(0) + this.prenom.charAt(0);
 }
 
 console.log(jules.getInitiales())
+
+var robert = {
+    nom: 'LEPREFET',
+    prenom: 'Robert',
+    pseudo: 'robert77',
+    getNomComplet: function () {
+        return this.nom + " " + this.prenom + ", " + this.pseudo
+    }
+};
+afficherPersonne(robert)
+
+function Client(numeroClient, nom, prenom, pseudo) {
+    Personne.call(this, nom, prenom, pseudo);
+    this.numeroClient = numeroClient;
+    this.getInfos = function () {
+        return this.prenom + " " + this.nom + " " + this.numeroClient;
+    }
+}
+
+
+var steve = new Client('A01', 'Steve', 'LUCAS', 'steve44');
+
+afficherPersonne(steve);
+console.log(steve.numeroClient);
+console.log(steve.getInfos());
